@@ -116,7 +116,7 @@ function AddEmployee() {
   const handleSubmit = e => {
     e.preventDefault();
     if (validate()) {
-      axios.post('http://localhost:3001/employees', formData).then(() => {
+      axios.post('http://emp-backend-crud.onrender.com/employees', formData).then(() => {
         toast.success('Employee added successfully!');
         navigate('/');
       });

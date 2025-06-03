@@ -14,12 +14,12 @@ function EmployeeList() {
   }, []);
 
   const fetchEmployees = () => {
-    axios.get('http://localhost:3001/employees')
+    axios.get('http://emp-backend-crud.onrender.com/employees')
       .then(res => setEmployees(res.data));
   };
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:3001/employees/${id}`).then(() => {
+    axios.delete(`http://emp-backend-crud.onrender.com/employees/${id}`).then(() => {
       setEmployees(employees.filter(emp => emp.id !== id));
       toast.success('Employee deleted successfully!');
     });
